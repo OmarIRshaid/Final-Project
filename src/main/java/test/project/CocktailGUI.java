@@ -313,7 +313,7 @@ public class CocktailGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         fruits.add(new Fruits("banana" , 110 , new Color1(255 , 235 , 109) , 130)) ;
         fruits.add(new Fruits("apple" , 95 , new Color1(255 , 0 , 0) , 187)) ;
-        fruits.add(new Fruits("Orange" , 60 , new Color1(255 , 165 , 0) , 217)) ;
+        fruits.add(new Fruits("Orange" , 60 , new Color1(255 , 165 , 0) , 200)) ;
         fruits.add(new Fruits("slice of Pineapple" , 50 , new Color1(255 , 200 , 50) , 87)) ;
         fruits.add(new Fruits("slice of Watermelon" , 46 , new Color1(242 , 60 , 78) , 200)) ;
         
@@ -350,6 +350,8 @@ public class CocktailGUI extends javax.swing.JFrame {
                 try
                 {
                     blenders.get(index).addIngredients(fruits.get(ingred - 1));
+                    String [] arr = new String[1];
+                    List2.setListData(arr);
                 }
                 catch(BlenderOverflowException ex)
                 {
@@ -359,28 +361,38 @@ public class CocktailGUI extends javax.swing.JFrame {
             
             else if (ingred == 6)
             {
-                                int volume = Integer.parseInt(JOptionPane.showInputDialog("how much milliliters? : ")) ;
-                                Milk milk = new Milk(volume) ;
                                 try
                                 {
+                                    int volume = Integer.parseInt(JOptionPane.showInputDialog("how much milliliters? : ")) ;
+                                    Milk milk = new Milk(volume) ;
                                     blenders.get(index).addIngredients(milk);
+                                    String [] arr = new String[1];
+                                    List2.setListData(arr);
                                 }
                                 catch(BlenderOverflowException ex)
                                 {
                                     JOptionPane.showMessageDialog(rootPane, ex.getMessage());
+                                }catch(NumberFormatException ex)
+                                {
+                                    JOptionPane.showMessageDialog(rootPane, "Enter Integer Number!!!");
                                 }
             }
             else if (ingred == 7)
             {
-                                int spoons = Integer.parseInt(JOptionPane.showInputDialog("number of spoons?? : "));
-                                Sugar sugar = new Sugar(spoons) ;
                                 try
                                 {
+                                    int spoons = Integer.parseInt(JOptionPane.showInputDialog("number of spoons?? : "));
+                                    Sugar sugar = new Sugar(spoons) ;
                                     blenders.get(index).addIngredients(sugar);
+                                    String [] arr = new String[1];
+                                    List2.setListData(arr);
                                 }
                                 catch(BlenderOverflowException ex)
                                 {
                                     JOptionPane.showMessageDialog(rootPane, ex.getMessage());
+                                }catch(NumberFormatException ex)
+                                {
+                                    JOptionPane.showMessageDialog(rootPane, "Enter Integer Number!!!");
                                 }
             }
             jTextArea1.setText("Remaining Capacity = " + blenders.get(index).getCapacity()+"");
