@@ -275,8 +275,6 @@ public class CocktailGUI extends javax.swing.JFrame {
         int index = List2.getSelectedIndex() ;
         if(index != -1)
         {
-//            int choice2 = Integer.parseInt(JOptionPane.showInputDialog("Choose a size of the Cup :\n1- 100 ml\n2- 200 ml\n3- 300 ml\nyour choice : ")) ;
-//            Cup cup = new Cup(choice2) ;
                         try
                         {
                             int choice2 ;
@@ -325,7 +323,7 @@ public class CocktailGUI extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try{
-            String size = JOptionPane.showInputDialog("whats the size of the blender ? ") ;
+            String size = JOptionPane.showInputDialog("whats the size of the blender milliliters? ") ;
             if(size != null)
             {
                 int choicee =  Integer.parseInt(size) ;
