@@ -137,13 +137,6 @@ public class Blender {
     
     public String getInfo()
     {
-        
-        String ingredients = "" ;
-        for(Ingredients d : this.ingredients)
-        {
-            ingredients += d.getName() ;
-            ingredients += " " ;
-        }
         String info = "The Final color is : " + this.color.getRed() + " , " + this.color.getGreen() + " , " + this.color.getBlue();
         info += "\nTotal Calories is :  " + (int)this.calories;
         info += "\nThe Volume of the Cocktail is : " + this.volume;
