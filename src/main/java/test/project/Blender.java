@@ -54,7 +54,7 @@ public class Blender {
            {
                ingredients.add(ingredient) ;
                this.capacity -= milk.getVolume() ;
-               this.logger.log("adding milk\n");
+               this.logger.log("Adding milk\n");
            }
            else
            {
@@ -70,7 +70,7 @@ public class Blender {
             {
                ingredients.add(ingredient) ;
                this.capacity -= fruit.getVolume() ;
-               this.logger.log("adding fruit\n");
+               this.logger.log("Adding  : " + fruit.getName() + "\n");
             }
             else
             {
@@ -82,7 +82,7 @@ public class Blender {
         else
         {
             ingredients.add(ingredient) ;
-            this.logger.log("adding sugar\n");
+            this.logger.log("Adding sugar\n");
         }
     }
     
@@ -132,7 +132,7 @@ public class Blender {
         }
         else
         {
-            this.logger.log("Not enough in the Blender to fill the cup\n");
+            this.logger.log("Not enough in the Blender to fill the cup!!\n");
             throw new BlenderEmptyException() ;
         }
         return cup ;
