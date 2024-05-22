@@ -352,7 +352,7 @@ public class CocktailGUI extends javax.swing.JFrame {
                 try
                 {
                     blenders.get(index).addIngredients(fruits.get(ingred - 1));
-                    String [] arr = new String[1];
+                    String [] arr = new String[0];
                     List2.setListData(arr);
                 }
                 catch(BlenderOverflowException ex)
@@ -368,7 +368,7 @@ public class CocktailGUI extends javax.swing.JFrame {
                                     int volume = Integer.parseInt(JOptionPane.showInputDialog("how much milliliters? : ")) ;
                                     Milk milk = new Milk(volume) ;
                                     blenders.get(index).addIngredients(milk);
-                                    String [] arr = new String[1];
+                                    String [] arr = new String[0];
                                     List2.setListData(arr);
                                 }
                                 catch(BlenderOverflowException ex)
@@ -386,7 +386,7 @@ public class CocktailGUI extends javax.swing.JFrame {
                                     int spoons = Integer.parseInt(JOptionPane.showInputDialog("number of spoons?? : "));
                                     Sugar sugar = new Sugar(spoons) ;
                                     blenders.get(index).addIngredients(sugar);
-                                    String [] arr = new String[1];
+                                    String [] arr = new String[0];
                                     List2.setListData(arr);
                                 }
                                 catch(BlenderOverflowException ex)
@@ -397,7 +397,7 @@ public class CocktailGUI extends javax.swing.JFrame {
                                     JOptionPane.showMessageDialog(rootPane, "Enter Integer Number!!!");
                                 }
             }
-            jTextArea1.setText("Remaining Capacity = " + blenders.get(index).getCapacity()+"");
+            jTextArea1.setText("Remaining Capacity = " + blenders.get(index).getCapacity());
         }
         else
             JOptionPane.showMessageDialog(rootPane, "choose a blender to add to ");
@@ -435,7 +435,7 @@ public class CocktailGUI extends javax.swing.JFrame {
         int index = List1.getSelectedIndex();
         if(index != -1)
         {
-            jTextArea1.setText("Remaining Capacity = " + blenders.get(index).getCapacity()+"");
+            jTextArea1.setText("Remaining Capacity = " + blenders.get(index).getCapacity());
             List2.setSelectedValue(null, rootPaneCheckingEnabled);
             jPanel1.setBackground(null);
         }
