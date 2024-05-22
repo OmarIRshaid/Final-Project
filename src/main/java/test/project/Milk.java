@@ -19,9 +19,8 @@ public class Milk extends Ingredients {
     }
 
     public Milk(int volume) {
-        super("Milk", 2);
+        super("Milk", volume * 2);
         this.volume = volume;
-        this.setCalories(volume * 2);
     }
 
     

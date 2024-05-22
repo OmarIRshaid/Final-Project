@@ -19,9 +19,8 @@ public class Sugar extends Ingredients {
     }
 
     public Sugar(int noOfSpoons) {
-        super("Sugar" , 20) ;
+        super("Sugar" , noOfSpoons * 20) ;
         this.noOfSpoons = noOfSpoons;
-        super.setCalories(noOfSpoons * 20);
     }
     
     @Override

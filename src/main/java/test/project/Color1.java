@@ -49,7 +49,10 @@ public class Color1 {
         this.green = green;
     }
     
-    
+    public String getInfo()
+    {
+        return "The Final color is : " + this.red + " , " + this.green + " , " + this.blue;
+    }
     
     
 }

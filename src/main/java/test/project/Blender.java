@@ -140,7 +140,7 @@ public class Blender {
     
     public String getInfo()
     {
-        String info = "The Final color is : " + this.color.getRed() + " , " + this.color.getGreen() + " , " + this.color.getBlue();
+        String info = this.color.getInfo() ;
         info += "\nTotal Calories is :  " + (int)this.calories;
         info += "\nThe Volume of the Cocktail is : " + this.volume;
         return info ;
