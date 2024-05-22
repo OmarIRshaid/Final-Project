@@ -58,6 +58,7 @@ public class Blender {
            }
            else
            {
+               this.logger.log("Blender Overflow!!\n");
                throw new BlenderOverflowException() ;
            }
         }
@@ -73,6 +74,7 @@ public class Blender {
             }
             else
             {
+               this.logger.log("Blender Overflow!!\n");
                throw new BlenderOverflowException() ;
             }
         }
@@ -130,6 +132,7 @@ public class Blender {
         }
         else
         {
+            this.logger.log("Not enough in the Blender to fill the cup\n");
             throw new BlenderEmptyException() ;
         }
         return cup ;
